@@ -28,7 +28,7 @@
   "maxdepth": 3,
   "maxlen": 120,
   "multistr": true,
-  "predef": [
+  "predef":[
   "after",
   "afterEach",
   "before",
