@@ -9,13 +9,13 @@ var log = index.log;
 log.debug = function() {};
 
 var chai = require('chai');
-var bitcore = require('bitcore-lib-gobyte');
+var bitcore = require('bitcore-lib-gravity');
 var rimraf = require('rimraf');
 var node;
 
 var should = chai.should();
 
-var BitcoinRPC = require('bitcoind-rpc-gobyte');
+var BitcoinRPC = require('bitcoind-rpc-gravity');
 var index = require('..');
 var Transaction = bitcore.Transaction;
 var BitcoreNode = index.Node;
@@ -53,7 +53,7 @@ describe('Node Functionality', function() {
             config: {
               spawn: {
                 datadir: datadir,
-                exec: path.resolve(__dirname, process.env.HOME, './.bitcore/data/gobyted')
+                exec: path.resolve(__dirname, process.env.HOME, './.bitcore/data/gravityd')
               }
             }
           }

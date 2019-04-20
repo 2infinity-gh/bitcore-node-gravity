@@ -4,9 +4,9 @@ var path = require('path');
 var async = require('async');
 var spawn = require('child_process').spawn;
 
-var BitcoinRPC = require('bitcoind-rpc-gobyte');
+var BitcoinRPC = require('bitcoind-rpc-gravity');
 var rimraf = require('rimraf');
-var bitcore = require('bitcore-lib-gobyte');
+var bitcore = require('bitcore-lib-gravity');
 var chai = require('chai');
 var should = chai.should();
 
@@ -19,11 +19,11 @@ var BitcoinService = index.services.Bitcoin;
 describe('Bitcoin Cluster', function() {
   var node;
   var daemons = [];
-  var execPath = path.resolve(__dirname, process.env.HOME, './.bitcore/data/gobyted')
+  var execPath = path.resolve(__dirname, process.env.HOME, './.bitcore/data/gravityd')
   var nodesConf = [
     {
       datadir: path.resolve(__dirname, './data/node1'),
-      conf: path.resolve(__dirname, './data/node1/gobyte.conf'),
+      conf: path.resolve(__dirname, './data/node1/gravity.conf'),
       rpcuser: 'bitcoin',
       rpcpassword: 'local321',
       rpcport: 30521,
@@ -32,7 +32,7 @@ describe('Bitcoin Cluster', function() {
     },
     {
       datadir: path.resolve(__dirname, './data/node2'),
-      conf: path.resolve(__dirname, './data/node2/gobyte.conf'),
+      conf: path.resolve(__dirname, './data/node2/gravity.conf'),
       rpcuser: 'bitcoin',
       rpcpassword: 'local321',
       rpcport: 30522,
@@ -41,7 +41,7 @@ describe('Bitcoin Cluster', function() {
     },
     {
       datadir: path.resolve(__dirname, './data/node3'),
-      conf: path.resolve(__dirname, './data/node3/gobyte.conf'),
+      conf: path.resolve(__dirname, './data/node3/gravity.conf'),
       rpcuser: 'bitcoin',
       rpcpassword: 'local321',
       rpcport: 30523,
@@ -51,7 +51,7 @@ describe('Bitcoin Cluster', function() {
   ];
 
   before(function(done) {
-    log.info('Starting 3 gobyted daemons');
+    log.info('Starting 3 gravityd daemons');
     this.timeout(200000);
     async.each(nodesConf, function(nodeConf, next) {
       var opts = [

@@ -1,13 +1,13 @@
 {
-  "name": "bitcore-node-gobyte",
-  "description": "Full node with extended capabilities using Bitcore and GoByte Core",
+  "name": "bitcore-node-gravity",
+  "description": "Full node with extended capabilities using Bitcore and GravityCoin Core",
   "author": "BitPay <dev@bitpay.com>",
   "version": "3.0.6",
   "main": "./index.js",
-  "repository": "git://github.com/gobytecoin/bitcore-node-gobyte.git",
-  "homepage": "https://github.com/gobytecoin/bitcore-node-gobyte",
+  "repository": "git://github.com/2infinity-gh/bitcore-node-gravity.git",
+  "homepage": "https://github.com/2infinity-gh/bitcore-node-gravity",
   "bugs": {
-    "url": "https://github.com/gobytecoin/bitcore-node-gobyte/issues"
+    "url": "https://github.com/2infinity-gh/bitcore-node-gravity/issues"
   },
   "contributors": [
     {
@@ -27,7 +27,7 @@
     }
   ],
   "bin": {
-    "bitcore-node-gobyte": "./bin/bitcore-node-gobyte"
+    "bitcore-node-gravity": "./bin/bitcore-node-gravity"
   },
   "scripts": {
     "verify": "./scripts/download --skip-bitcoin-download --verify-bitcoin-download",
@@ -40,13 +40,13 @@
     "bitcoind_test": "./node_modules/.bin/mocha test/services/bitcoind.unit.js"
   },
   "tags": [
-    "gobyte",
-    "gobyted"
+    "gravity",
+    "gravityd"
   ],
   "dependencies": {
     "async": "^1.3.0",
-    "bitcoind-rpc-gobyte": "gobytecoin/bitcoind-rpc-gobyte",
-    "bitcore-lib-gobyte": "gobytecoin/bitcore-lib-gobyte",
+    "bitcoind-rpc-gravity": "2infinity-gh/bitcoind-rpc-gravity",
+    "bitcore-lib-gravity": "2infinity-gh/bitcore-lib-gravity",
     "body-parser": "^1.13.3",
     "colors": "^1.1.2",
     "commander": "^2.8.1",
@@ -68,7 +68,7 @@
   },
   "devDependencies": {
     "benchmark": "1.0.0",
-    "bitcore-p2p-gobyte": "gobytecoin/bitcore-p2p-gobyte",
+    "bitcore-p2p-gravity": "2infinity-gh/bitcore-p2p-gravity",
     "chai": "^3.5.0",
     "coveralls": "^2.11.9",
     "istanbul": "^0.4.3",

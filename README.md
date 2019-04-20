@@ -1,17 +1,17 @@
-Bitcore Node GoByte
+Bitcore Node GravityCoin
 ============
 
-A GoByte full node for building applications and services with Node.js. A node is extensible and can be configured to run additional services. At the minimum a node has an interface to [GoByte Core v0.12.1.x](https://github.com/gobytecoin/gobyte/tree/v0.12.1.x) for more advanced address queries. Additional services can be enabled to make a node more useful such as exposing new APIs, running a block explorer and wallet service.
+A GravityCoin full node for building applications and services with Node.js. A node is extensible and can be configured to run additional services. At the minimum a node has an interface to [GravityCoin Core v0.12.1.x](https://github.com/2infinity-gh/gravity/tree/v0.12.1.x) for more advanced address queries. Additional services can be enabled to make a node more useful such as exposing new APIs, running a block explorer and wallet service.
 
 ## Install
 
 ```bash
-npm install -g bitcore-node-gobyte
+npm install -g bitcore-node-gravity
 ```
 
 ## Prerequisites
 
-- GoByte Core (v0.12.1.x) with support for additional indexing *(see above)*
+- GravityCoin Core (v0.12.1.x) with support for additional indexing *(see above)*
 - Node.js v0.10, v0.12, v4 or v5
 - ZeroMQ *(libzmq3-dev for Ubuntu/Debian or zeromq on OSX)*
 - ~20GB of disk storage
@@ -22,16 +22,16 @@ npm install -g bitcore-node-gobyte
 Bitcore includes a Command Line Interface (CLI) for managing, configuring and interfacing with your Bitcore Node.
 
 ```bash
-bitcore-node-gobyte create -d <gobyte-data-dir> mynode
+bitcore-node-gravity create -d <gravity-data-dir> mynode
 cd mynode
-bitcore-node-gobyte install <service>
-bitcore-node-gobyte install https://github.com/yourname/helloworld
-bitcore-node-gobyte start
+bitcore-node-gravity install <service>
+bitcore-node-gravity install https://github.com/yourname/helloworld
+bitcore-node-gravity start
 ```
 
 This will create a directory with configuration files for your node and install the necessary dependencies.
 
-Please note that [GoByte Core v0.12.1.x](https://github.com/gobytecoin/gobyte/tree/v0.12.1.x) will be downloaded automatically. Once completed the gobyted binary should be placed into the &lt;gobyte-data-dir&gt; folder specified during node creation.
+Please note that [GravityCoin Core v0.12.1.x](https://github.com/2infinity-gh/gravity/tree/v0.12.1.x) will be downloaded automatically. Once completed the gravityd binary should be placed into the &lt;gravity-data-dir&gt; folder specified during node creation.
 
 For more information about (and developing) services, please see the [Service Documentation](docs/services.md).
 
@@ -39,9 +39,9 @@ For more information about (and developing) services, please see the [Service Do
 
 There are several add-on services available to extend the functionality of Bitcore:
 
-- [Insight API](https://github.com/gobytecoin/insight-api-gobyte/tree/master)
-- [Insight UI](https://github.com/gobytecoin/insight-ui-gobyte/tree/master)
-- [Bitcore Wallet Service](https://github.com/gobytecoin/bitcore-wallet-service/tree/master)
+- [Insight API](https://github.com/2infinity-gh/insight-api-gravity/tree/master)
+- [Insight UI](https://github.com/2infinity-gh/insight-ui-gravity/tree/master)
+- [Bitcore Wallet Service](https://github.com/2infinity-gh/bitcore-wallet-service/tree/master)
 
 ## Documentation
 
@@ -60,7 +60,7 @@ Please send pull requests for bug fixes, code optimization, and ideas for improv
 
 ## License
 
-Code released under [the MIT license](https://github.com/bitpay/bitcore-node-gobyte/blob/master/LICENSE).
+Code released under [the MIT license](https://github.com/bitpay/bitcore-node-gravity/blob/master/LICENSE).
 
 Copyright 2013-2015 BitPay, Inc.
 

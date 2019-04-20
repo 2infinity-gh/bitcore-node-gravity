@@ -6,11 +6,11 @@ var path = require('path');
 var index = require('..');
 var log = index.log;
 
-var p2p = require('bitcore-p2p-gobyte');
+var p2p = require('bitcore-p2p-gravity');
 var Peer = p2p.Peer;
 var Messages = p2p.Messages;
 var chai = require('chai');
-var bitcore = require('bitcore-lib-gobyte');
+var bitcore = require('bitcore-lib-gravity');
 var Transaction = bitcore.Transaction;
 var BN = bitcore.crypto.BN;
 var async = require('async');
@@ -21,7 +21,7 @@ var bitcoind;
 var should = chai.should();
 var assert = chai.assert;
 var sinon = require('sinon');
-var BitcoinRPC = require('bitcoind-rpc-gobyte');
+var BitcoinRPC = require('bitcoind-rpc-gravity');
 var transactionData = [];
 var blockHashes = [];
 var txs = [];
@@ -52,7 +52,7 @@ describe('P2P Functionality', function() {
       bitcoind = require('../').services.Bitcoin({
         spawn: {
           datadir: datadir,
-          exec: path.resolve(__dirname, process.env.HOME, './.bitcore/data/gobyted')
+          exec: path.resolve(__dirname, process.env.HOME, './.bitcore/data/gravityd')
         },
         node: {
           network: bitcore.Networks.testnet
@@ -63,7 +63,7 @@ describe('P2P Functionality', function() {
         log.error('error="%s"', err.message);
       });
 
-      log.info('Waiting for GoByte Core to initialize...');
+      log.info('Waiting for GravityCoin Core to initialize...');
 
       bitcoind.start(function(err) {
         if (err) {

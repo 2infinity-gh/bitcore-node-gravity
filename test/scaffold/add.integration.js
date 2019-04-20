@@ -25,7 +25,7 @@ describe('#add', function() {
         throw err;
       }
       fs.writeFile(
-        testDir + '/s0/s1/bitcore-node-gobyte.json',
+        testDir + '/s0/s1/bitcore-node-gravity.json',
         JSON.stringify(startConfig),
         function(err) {
           if (err) {
@@ -90,12 +90,12 @@ describe('#add', function() {
       });
     });
 
-    it('will update bitcore-node-gobyte.json services', function(done) {
+    it('will update bitcore-node-gravity.json services', function(done) {
       var callCount = 0;
       var oldPackage = {
         dependencies: {
-            'bitcore-lib-gobyte': 'gobytecoin/bitcore-lib-gobyte',
-			'bitcore-node-gobyte': 'gobytecoin/bitcore-node-gobyte'
+            'bitcore-lib-gravity': '2infinity-gh/bitcore-lib-gravity',
+			'bitcore-node-gravity': '2infinity-gh/bitcore-node-gravity'
         }
       };
       var spawn = sinon.stub().returns({
@@ -130,7 +130,7 @@ describe('#add', function() {
         services: ['a', 'b', 'c']
       }, function(err) {
         should.not.exist(err);
-        var configPath = path.resolve(testDir, 's0/s1/bitcore-node-gobyte.json');
+        var configPath = path.resolve(testDir, 's0/s1/bitcore-node-gravity.json');
         var config = JSON.parse(fs.readFileSync(configPath));
         config.services.should.deep.equal(['a','b','c']);
         done();
