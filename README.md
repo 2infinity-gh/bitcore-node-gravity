@@ -31,7 +31,7 @@ bitcore-node-gravity start
 
 This will create a directory with configuration files for your node and install the necessary dependencies.
 
-Please note that [GravityCoin Core v0.12.1.x](https://github.com/2infinity-gh/gravity/tree/v0.12.1.x) will be downloaded automatically. Once completed the gravityd binary should be placed into the &lt;gravity-data-dir&gt; folder specified during node creation.
+Please note that [GravityCoin Core v4.5.0.1](https://github.com/2infinity-gh/gravity/tree/v0.12.1.x) will be downloaded automatically. Once completed the gravityd binary should be placed into the &lt;gravity-data-dir&gt; folder specified during node creation.
 
 For more information about (and developing) services, please see the [Service Documentation](docs/services.md).
 
